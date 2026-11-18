@@ -1,38 +1,19 @@
-# BVapp — Cenários de Gestão de Alertas de Serviços
+# BVapp — Gestão de Alertas de Serviços
 
-Autor — Ryan Monteiro Gomes
+Autor: Ryan Monteiro Gomes. Entrega documental de dez cenários; nenhuma implementação ou execução de testes integra este pacote.
 
-Instituto Federal da Paraíba — Verificação, Validação e Testes de Software
+## Organização
 
-Dez cenários documentam os requisitos RF03011 a RF03013 do submódulo Gestão de Alertas de Serviços (#23456), integrante do Módulo 03 — Gestão de Manutenção de Ativos. Cada cenário inclui objetivo, requisitos, ator, preparação, fluxo principal, alternativas, regras, resultados esperados e autoria. A documentação descreve expectativas para execução futura.
-
-## Cenários
-
-| Arquivo | Requisito | Título | Critérios do OpenProject |
-| --- | --- | --- | --- |
-| [UC001](bvapp/alertas/tests/cenarios/UC001.md) | RF03011 | Executar a verificação automática | #25081, #25085 |
-| [UC002](bvapp/alertas/tests/cenarios/UC002.md) | RF03011 | Calcular a próxima manutenção | #25082 |
-| [UC003](bvapp/alertas/tests/cenarios/UC003.md) | RF03011, RF03012 | Identificar manutenção próxima e gerar alerta | #25083, #25084, #25228 |
-| [UC004](bvapp/alertas/tests/cenarios/UC004.md) | RF03011 | Evitar alertas duplicados | #25086 |
-| [UC005](bvapp/alertas/tests/cenarios/UC005.md) | RF03012 | Enviar alerta aos gestores técnicos | #25229 |
-| [UC006](bvapp/alertas/tests/cenarios/UC006.md) | RF03012 | Apresentar notificação com informações completas | #25230, #25233 |
-| [UC007](bvapp/alertas/tests/cenarios/UC007.md) | RF03012 | Registrar o envio no histórico | #25232 |
-| [UC008](bvapp/alertas/tests/cenarios/UC008.md) | RF03013 | Consultar e atualizar automaticamente a lista | #25249, #25250, #25254 |
-| [UC009](bvapp/alertas/tests/cenarios/UC009.md) | RF03012, RF03013 | Marcar alerta como visualizado | #25234, #25251 |
-| [UC010](bvapp/alertas/tests/cenarios/UC010.md) | RF03013 | Acessar serviço ou OS a partir do alerta | #25253 |
-
-## Documentos de apoio
-
-- [Requisitos e hierarquia](requisitos/requisitos-funcionais.md)
+- [Requisitos funcionais](requisitos/requisitos-funcionais.md)
+- [Cenários numerados](functional_tests/README.md)
 - [Rastreabilidade](docs/rastreabilidade.md)
-- [Dúvidas para esclarecimento](docs/pendencias.md)
+- [Dúvidas de requisitos](docs/pendencias.md)
+- [Evidências e divergências do BVapp](docs/evidencias-bvapp.md)
 
-## Escopo e entrega
+## Convenções
 
-Os critérios fornecidos cobrem geração automática, envio, consulta e visualização de alertas. A manutenção completa de cadastro de alertas com criar, consultar, atualizar e excluir depende de requisitos adicionais. Por isso, os dez cenários correspondem às funções efetivamente especificadas nas capturas.
+UC identifica o cenário; FP identifica o fluxo principal; A1, A2 e A3 identificam alternativas; RN1 identifica as regras. Cada fluxo reinicia sua numeração em 1. Uma referência como UC009/FP.4 identifica uma ação específica. As alternativas indicam ponto de origem, preparação e retorno ou encerramento.
 
-A documentação está organizada em bvapp/alertas/tests/cenarios. Os identificadores UC são locais ao mini projeto. A numeração RF03011 a RF03013 dá continuidade aos requisitos RF03001 a RF03010 de Gestão de Ordens de Serviço no documento coletivo. Os IDs numéricos preservam os vínculos do OpenProject.
+O escopo normativo é RF03011–RF03013 e seus 17 critérios de aceitação. O código foi consultado estaticamente para identificar telas, ações e diferenças; não foi executado. O CRUD genérico existente no sistema não foi incorporado como requisito aprovado de manutenção preventiva.
 
-Os requisitos do submódulo estão em [requisitos/requisitos-funcionais.md](requisitos/requisitos-funcionais.md).
-
-As dúvidas de negócio estão registradas em docs/pendencias.md, conforme a orientação da atividade. Os fluxos com resultado dependente dessas decisões devem ser complementados após esclarecimento com os stakeholders.
+Para publicar, extraia este ZIP e substitua os arquivos documentais anteriores. Remova a pasta antiga bvapp/alertas/tests/cenarios para não manter versões conflitantes.
